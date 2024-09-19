@@ -13,7 +13,7 @@ import { GlobalStyle, Wrapper } from "../components/global_style";
 // Sections
 const Section = styled.section`
   width: 100%;
-  padding: 4rem 2rem;
+  padding: 2rem 2rem;
   background: ${(props) => (props.grey ? '#f9f9f9' : '#fff')};
 `;
 
@@ -21,6 +21,8 @@ const Section = styled.section`
 const SectionTitle = styled.h2`
   text-align: center;
   margin-bottom: 2rem;
+  font-size: 2.5rem;
+  color: #283e51;
 `;
 
 // Form Container
@@ -146,7 +148,7 @@ const HomePage = () => {
 
       {/* Footer */}
       <Section>
-        <p style={{ textAlign: 'center' }}>© 2023 Ticket Booking Website</p>
+        <p style={{ textAlign: 'center' }}>© Just Kidding Airways</p>
       </Section>
     </Wrapper>
   );

@@ -65,7 +65,6 @@ const FakeContact = () => {
         </FunMessage>
         <FunMessage>
           Feel free to stare at this page for as long as you want, though! <br />
-          It's really cool, right? 😎
         </FunMessage>
         <FooterMessage>
           Thanks for visiting, but don't hold your breath for a reply! 😂

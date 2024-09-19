@@ -3,6 +3,8 @@
 import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import axios from 'axios';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTimes } from '@fortawesome/free-solid-svg-icons';
 
 // Import components and styles
 import NavBarApp from '../../components/nav_bar';
@@ -29,7 +31,7 @@ const HeaderOverlay = styled.div`
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(40, 62, 81, 0.6);
+  background: linear-gradient(45deg, #4b79a1, #283e51, #4b79a1);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -153,9 +155,12 @@ const CloseButton = styled.button`
   right: 1rem;
   background: transparent;
   border: none;
-  font-size: 1.5rem;
+  font-size: 2rem; /* Increase font size */
   cursor: pointer;
+  color: #000; /* Ensure the icon is a visible color */
+  z-index: 1001; /* Ensure it is above other elements */
 `;
+
 
 const DestinationDetails = () => {
   const router = useRouter();
@@ -256,20 +261,21 @@ const DestinationDetails = () => {
         </Section>
       </MainContent>
 
-      {/* Booking Modal */}
-      {isBookingModalVisible && (
-        <ModalOverlay onClick={() => setBookingModalVisible(false)}>
-          <ModalContent onClick={(e) => e.stopPropagation()}>
-            <CloseButton onClick={() => setBookingModalVisible(false)}>&times;</CloseButton>
-            <BookingPanel />
-          </ModalContent>
-        </ModalOverlay>
-      )}
+{/* Booking Modal */}
+{isBookingModalVisible && (
+  <ModalOverlay onClick={() => setBookingModalVisible(false)}>
+    <ModalContent onClick={(e) => e.stopPropagation()}>
+      <CloseButton onClick={() => setBookingModalVisible(false)}>
+        <FontAwesomeIcon icon={faTimes} />
+      </CloseButton>
+      <BookingPanel />
+    </ModalContent>
+  </ModalOverlay>
+)}
 
       {/* Footer */}
       <Footer>
-        <p>© 2023 Your Company Name</p>
-        <p>Contact us: email@example.com | Phone: (123) 456-7890</p>
+        <p>© Just Kidding Airways</p>
       </Footer>
     </Wrapper>
   );

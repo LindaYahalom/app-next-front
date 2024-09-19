@@ -90,7 +90,7 @@ const Destination = () => {
         <WrapperPadding>
           <Header>
             <Title>Explore Our Destinations</Title>
-            <Subtitle>Discover your next adventure with us</Subtitle>
+            <Subtitle>Book now, travel never:)</Subtitle>
           </Header>
           <Gallery>
             {destinations.map((destination) => (
